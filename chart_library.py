@@ -15,11 +15,11 @@ def pie_chart(dict, title):
         plt.text(0, 0.15, str(int(values[i] * 100)) + '%', horizontalalignment='center', verticalalignment='center', fontsize = 20, family = 'sans-serif')
     return plt.show()
 
-def scatter_plot(legend, dict, title, axis):
+def scatter_plot(dict, title, axis_label):
     fig, axes = plt.subplots(nrows=1, ncols=2, figsize=(10, 4.5))
     fig.suptitle(title, fontsize=16, y=0.97)
     color = [['#806437', '#FFE5BA', '#FFC76E', '#80725D', '#CCA057', '#CC9946'], ['#2A6980', '#A1E6FF', '#54D1FF', '#507380', '#43A6CB' ,'#8DBDCC']]
-    for i, key, legend, color, xleg, yleg in zip([0, 1], dict, legend, color, [0.95, 0.9], [1.47, 1.47]):
+    for i, key, color, axis, xleg, yleg in zip([0, 1], dict, color, axis_label, [0.95, 0.9], [1.47, 1.47]):
         label, x, y = dict[key].values()
         x = np.array(x)
         y = np.array(y)
