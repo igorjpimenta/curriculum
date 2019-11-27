@@ -16,8 +16,6 @@ def show(info, resume, exp, edu, comp, lang):
     display(HTML('<big>' + exp['current']['assignments'] + '</big>'))
     display(HTML('<big><b> • ' + exp['last']['function'] + ' | ' + exp['last']['time'] + '</b></big>'))
     display(HTML('<big>' + exp['last']['assignments'] + '</big>'))
-    display(HTML('<big><b> • ' + exp['secondtolast']['function'] + ' | ' + exp['secondtolast']['time'] + '</b></big>'))
-    display(HTML('<big>' + exp['secondtolast']['assignments'] + '</big>'))
     
     scatter_plot(comp, 'Ferramentas e habilidades', [['Prática', 'Conhecimento'], ['Utilização', 'Aprendizado']])
     
